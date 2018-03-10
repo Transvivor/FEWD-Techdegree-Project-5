@@ -1,9 +1,13 @@
 
 .form{
+  border: none;
 }
 .form__label--hidden{
-
+  display: none;
 }
 .form__input{
-  
+  padding: 10px;
+  width: 100%;
+  border: none;
+  border-bottom: teal 5px solid;
 }

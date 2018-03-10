@@ -1,18 +1,36 @@
-.btn--default{
-  background-color: $default;
+[class^="btn--"]{
+      @include border-radius;
+      border: none;
+      height: 50px;
+      width: 100%;
+      margin: 15px 0;
+      color: white;
+      font-size: $font-xsm;
+      font-weight: 700;
+      text-transform: uppercase;
+      font: sans-serif;
+      @media (min-width: 700px){
+        width: initial;
+        padding: 5px 50px;
+      }
 }
-.btn--success{
-  background-color: $success;
-}
-.btn--error{
-  background-color: $error;
-}
-.btn--warning{
-  background-color: $warning;
-}
-.btn--info{
-  background-color: $info;
-}
-.theme__colors{
 
+.theme__colors{
+  &.btn--{
+    &default{
+      background-color: $default;
+    }
+    &success{
+      background-color: $success;
+    }
+    &error{
+      background-color: $error;
+    }
+    &warning{
+      background-color: $warning;
+    }
+    &info{
+      background-color: $info;
+    }
+  }
 }

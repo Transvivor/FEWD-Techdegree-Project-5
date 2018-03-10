@@ -1,46 +1,94 @@
 .container{
-
+ width: 100%;
+ margin: 0 auto;
+ padding: 10px;
+ max-width: 1200px;
+ @media (min-width: 700px){
+   width: 85%;
+ }
 }
 
 .grid__row{
-
+  margin: auto;
+  margin-bottom: 50px;
+  @extend %clearfix;
+    @include border-radius;
+    @media (min-width: 700px){
+      @include flexy(row);
+      margin: 10px auto;
+  }
 }
-.grid__col--2{
 
-}
-.grid__col--3{
-
-}
-.grid__col--4{
-
-}
-.grid__col--5{
-
-}
-.grid__col--6{
-
-}
-.grid__col--7{
-
-}
-.grid__col--8{
-
-}
-.grid__col--9{
-
-}
-.grid__col--10{
-
-}
-.grid__col--11{
-
-}
 .grid__col--12{
+  @include flexy(row);
+   width:100%;
 
+}
+[class^="grid__col"]{
+  padding: 10px;
+  margin: 5px 0;
+  @include border-radius;
+}
+@media (min-width: 700px){
+  .grid__col{
+    &--2{
+      width:(100% / 6) - ($grid-spacing * 10 / 12);
+    }
+    &--3{
+      width:(100% / 4) - ($grid-spacing * 10 / 12);
+    }
+    &--4{
+      width:(100% / 3) - ($grid-spacing * 8 / 12);
+    }
+    &--5{
+      width:(100% / 2.4) - ($grid-spacing * 7 / 12);
+    }
+    &--6{
+      width:(100% / 2) - ($grid-spacing * 6 / 12);
+    }
+    &--7{
+      width:(100% / 1.714285714285714) - ($grid-spacing * 5 / 12);
+    }
+    &--8{
+      width:(100% / 1.5) - ($grid-spacing * 4 / 12);
+    }
+    &--9{
+      width:(100% / 1.333333333333333) - ($grid-spacing * 3 / 12);
+    }
+    &--10{
+      width:(100% / 1.2) - ($grid-spacing * 2 / 12);
+    }
+    &--11{
+      width:(100% / 1.090909090909091) - ($grid-spacing * 1 / 12);
+    }
+    &--12{
+    }
+  }
 }
 .centered{
-
+  display: block;
+  margin: auto;
 }
 .theme__colors{
-
+  &.grid__col--12{
+    background-color: map-get($colormap, teal);
+  }
+  &.grid__col--8{
+    background-color: map-get($colormap, orange);
+  }
+  &.grid__col--7{
+    background-color: map-get($colormap, red);
+  }
+  &.grid__col--6{
+    background-color: map-get($theme-colors, darkblue);
+  }
+  &.grid__col--5{
+    background-color: map-get($colormap, green);
+  }
+  &.grid__col--4{
+    background-color: map-get($colormap, blue);
+  }
+  &.grid__col--3{
+    background-color: map-get($colormap, purple);
+  }
 }

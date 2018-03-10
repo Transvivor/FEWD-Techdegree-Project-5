@@ -3,17 +3,35 @@
 /*
 COLORS
 */
+$colormap:(
+  teal    : #58e1c1,
+  blue    : #51ddfc,
+  green   : #63cc82,
+  red     : #e4757a,
+  orange  : #fd7856,
+  purple  : #927bc1
+);
+$theme-colors:(
+  red: map-get($colormap, red),
+  orange: map-get($colormap, orange),
+  yellow: #ffff00,
+  green: map-get($colormap, green),
+  blue: map-get($colormap, blue),
+  darkblue: darken(#51ddfc, 10),
+  purple: map-get($colormap, purple)
+);
 
-$teal   : #58e1c1;
-$blue   : #51ddfc;
-$green  : #63cc82;
-$red    : #e4757a;
-$orange : #fd7856;
-$purple : #927bc1;
 
+$default : map-get($colormap, blue);
+$success : map-get($colormap, green);
+$error   : map-get($colormap, red);
+$warning : map-get($colormap, orange);
+$info    : map-get($colormap, purple);
 
-$default : $blue;
-$success : $green;
-$error   : $red;
-$warning : $orange;
-$info    : $purple;
+$grid-spacing: 5%;
+$border-radius: 10px;
+
+$font-xsm: 12px;
+$font-sm: 18px;
+$font-md: 24px;
+$font-lg: 30px;
