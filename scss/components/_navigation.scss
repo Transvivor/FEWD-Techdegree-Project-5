@@ -1,15 +1,26 @@
 
 .nav__item{
-  padding: 15px;
   margin: 10px;
-  border-radius: 5px;
+  @media (min-width: 700px){
+  display: inline-block;
+}
 }
 .nav__item a {
+  display: block;
+  padding: 15px;
   color: black;
   text-decoration: none;
+  border-radius: 5px;
+  @media (min-width: 700px){
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0;
+    margin-left: auto;
+    display: inline-block;
+  }
 }
 
-.nav__item:hover{
+.nav__item a:hover{
   color: white;
   background-color: map-get($colormap, teal)
 }

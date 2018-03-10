@@ -4,13 +4,14 @@
  padding: 10px;
  max-width: 1200px;
  @media (min-width: 700px){
-   width: 85%;
+   width: 80%;
  }
 }
 
 .grid__row{
   margin: auto;
   margin-bottom: 50px;
+  padding: 0;
   @extend %clearfix;
     @include border-radius;
     @media (min-width: 700px){

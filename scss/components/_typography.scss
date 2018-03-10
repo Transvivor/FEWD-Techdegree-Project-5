@@ -5,7 +5,7 @@
 }
 .blockquote{
   border-radius: $border-radius;
-  border-left: 10px teal solid;
+  border-left: 10px (map-get($colormap, teal)) solid;
   margin: 15px 20px;
   padding: 0;
   font-style: italic;
@@ -14,7 +14,7 @@
 
 }
 .headline--primary{
-  color: teal;
+  color: (map-get($colormap, teal));
   margin: 10px;
   margin-bottom: 30px;
   font-weight: 700;

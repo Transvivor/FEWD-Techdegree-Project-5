@@ -9,5 +9,5 @@
   padding: 10px;
   width: 100%;
   border: none;
-  border-bottom: teal 5px solid;
+  border-bottom:(map-get($colormap, teal)) 5px solid;
 }
