@@ -11,6 +11,6 @@
 .img--avatar{
   display: block;
   margin: 50px auto;
-  @media (min-width: 700px){
+  @include mq{
   margin: 10px auto;}
 }

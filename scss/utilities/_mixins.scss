@@ -1,4 +1,9 @@
 //Media Queries
+@mixin mq {
+  @media (min-width: $bp-sm){
+    @content;
+  }
+}
 
 //Flexbox settings
 @mixin flexy($direction) {
@@ -7,15 +12,29 @@
   justify-content: space-between;
   @if $direction == row {
     flex-direction: row;
-  } @else if $direction == column {
+  }
+  @else if $direction == column {
     flex-direction: column;
   }
 }
 
+//Element and Modifier BEM Selectors
+@mixin e($element){
+  &__#{$element}{
+    @content;
+  }
+}
+
+@mixin m($modifier){
+  &--#{$modifier}{
+    @content;
+  }
+}
+
+//Border Radius mixin
 @mixin border-radius($radius: 5px){
   -webkit-border-radius: $radius;
    -moz-border-radius: $radius;
     -ms-border-radius: $radius;
         border-radius: $radius;
 }
-//Element and Modifier BEM Selectors

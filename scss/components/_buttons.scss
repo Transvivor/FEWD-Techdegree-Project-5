@@ -9,27 +9,27 @@
       font-weight: 700;
       text-transform: uppercase;
       font: sans-serif;
-      @media (min-width: 700px){
+      @include mq {
         width: initial;
         padding: 5px 50px;
-      }
+     }
 }
 
 .theme__colors{
-  &.btn--{
-    &default{
+  &.btn{
+    @include m(default){
       background-color: $default;
     }
-    &success{
+    @include m(success){
       background-color: $success;
     }
-    &error{
+    @include m(error){
       background-color: $error;
     }
-    &warning{
+    @include m(warning){
       background-color: $warning;
     }
-    &info{
+    @include m(info){
       background-color: $info;
     }
   }

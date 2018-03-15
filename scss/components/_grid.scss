@@ -3,7 +3,7 @@
  margin: 0 auto;
  padding: 10px;
  max-width: 1200px;
- @media (min-width: 700px){
+ @include mq{
    width: 80%;
  }
 }
@@ -14,7 +14,7 @@
   padding: 0;
   @extend %clearfix;
     @include border-radius;
-    @media (min-width: 700px){
+    @include mq{
       @include flexy(row);
       margin: 10px auto;
   }
@@ -30,7 +30,7 @@
   margin: 5px 0;
   @include border-radius;
 }
-@media (min-width: 700px){
+@include mq{
   .grid__col{
     &--2{
       width:(100% / 6) - ($grid-spacing * 10 / 12);
